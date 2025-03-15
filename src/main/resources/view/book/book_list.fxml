@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.maxiflexy.dreamdevs.librarymanagementsystem.ui.controller.book.BookListController">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10" />
+    </padding>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Search:" />
+        <TextField fx:id="searchField" promptText="Search" HBox.hgrow="ALWAYS" />
+        <ComboBox fx:id="searchTypeComboBox" prefWidth="100" />
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Button text="Add Book" onAction="#handleAddBook" />
+        <Button text="Edit Book" onAction="#handleEditBook" />
+        <Button text="Delete Book" onAction="#handleDeleteBook" />
+        <Separator orientation="VERTICAL" />
+        <Button text="Sort by Title" onAction="#handleSortByTitle" />
+        <Button text="Sort by Genre" onAction="#handleSortByGenre" />
+        <Separator orientation="VERTICAL" />
+        <Button text="Export to CSV" onAction="#handleExportToCSV" />
+    </HBox>
+
+    <TableView fx:id="bookTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID" prefWidth="50" />
+            <TableColumn fx:id="titleColumn" text="Title" prefWidth="250" />
+            <TableColumn fx:id="authorColumn" text="Author" prefWidth="200" />
+            <TableColumn fx:id="genreColumn" text="Genre" prefWidth="150" />
+            <TableColumn fx:id="copiesColumn" text="Available Copies" prefWidth="100" />
+        </columns>
+        <placeholder>
+            <Label text="No books available" />
+        </placeholder>
+    </TableView>
+
+    <Pagination fx:id="pagination" />
+</VBox>

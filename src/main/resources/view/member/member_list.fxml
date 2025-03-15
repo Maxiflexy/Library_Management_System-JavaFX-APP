@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.maxiflexy.dreamdevs.librarymanagementsystem.ui.controller.member.MemberListController">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10" />
+    </padding>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Search:" />
+        <TextField fx:id="searchField" promptText="Search by name, email, or phone" HBox.hgrow="ALWAYS" />
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Button text="Add Member" onAction="#handleAddMember" />
+        <Button text="Edit Member" onAction="#handleEditMember" />
+        <Button text="Delete Member" onAction="#handleDeleteMember" />
+        <Separator orientation="VERTICAL" />
+        <Button text="Export to CSV" onAction="#handleExportToCSV" />
+    </HBox>
+
+    <TableView fx:id="memberTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID" prefWidth="50" />
+            <TableColumn fx:id="nameColumn" text="Name" prefWidth="200" />
+            <TableColumn fx:id="emailColumn" text="Email" prefWidth="250" />
+            <TableColumn fx:id="phoneColumn" text="Phone" prefWidth="150" />
+        </columns>
+        <placeholder>
+            <Label text="No members available" />
+        </placeholder>
+    </TableView>
+
+    <Pagination fx:id="pagination" />
+</VBox>

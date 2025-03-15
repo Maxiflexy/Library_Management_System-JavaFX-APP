@@ -1,0 +1,47 @@
+2025-03-15 08:37:45 - Error retrieving all books: ERROR: relation "books" does not exist
+  Position: 15
+2025-03-15 08:38:10 - Error retrieving all members: ERROR: relation "members" does not exist
+  Position: 15
+2025-03-15 08:38:15 - Error retrieving all members: ERROR: relation "members" does not exist
+  Position: 15
+2025-03-15 10:15:42 - Error retrieving all books: ERROR: relation "books" does not exist
+  Position: 15
+2025-03-15 10:22:15 - Book added: Things Fall Apart
+2025-03-15 10:23:33 - Book added: Half of a Yellow Sun
+2025-03-15 10:24:15 - Book added: Welcome to Lagos
+2025-03-15 10:24:59 - Book added: The Years of Childhood
+2025-03-15 10:25:34 - Member added: Ejemba Onyekachi
+2025-03-15 10:25:56 - Member added: Kolbe Capacity
+2025-03-15 10:26:14 - Member added: Viva Sis
+2025-03-15 10:26:57 - Book updated: Things Fall Apart NGN
+2025-03-15 10:27:17 - Book added: dfvsd
+2025-03-15 10:27:35 - Book deleted with ID: 5
+2025-03-15 10:30:11 - Book added: My book
+2025-03-15 10:32:20 - Book added: Programming Tech
+2025-03-15 11:03:29 - Member updated: Viva Sister
+2025-03-15 11:04:31 - Book with ID 2 borrowed. Available copies updated.
+2025-03-15 11:04:31 - Book borrowed: Book ID 2 by Member ID 1
+2025-03-15 11:04:55 - Book with ID 12 borrowed. Available copies updated.
+2025-03-15 11:04:55 - Book borrowed: Book ID 12 by Member ID 1
+2025-03-15 11:05:06 - Book with ID 8 borrowed. Available copies updated.
+2025-03-15 11:05:06 - Book borrowed: Book ID 8 by Member ID 2
+2025-03-15 11:05:22 - Book with ID 13 borrowed. Available copies updated.
+2025-03-15 11:05:22 - Book borrowed: Book ID 13 by Member ID 3
+2025-03-15 11:05:59 - Book returned: Record ID 1
+2025-03-15 11:05:59 - Book with ID 2 returned. Available copies updated.
+2025-03-15 11:07:16 - Book returned: Record ID 4
+2025-03-15 11:07:16 - Book with ID 13 returned. Available copies updated.
+2025-03-15 11:07:43 - Book returned: Record ID 2
+2025-03-15 11:07:43 - Book with ID 12 returned. Available copies updated.
+2025-03-15 11:08:01 - Book with ID 9 borrowed. Available copies updated.
+2025-03-15 11:08:01 - Book borrowed: Book ID 9 by Member ID 1
+2025-03-15 11:08:10 - Book with ID 9 borrowed. Available copies updated.
+2025-03-15 11:08:10 - Book borrowed: Book ID 9 by Member ID 2
+2025-03-15 11:08:36 - Book returned: Record ID 6
+2025-03-15 11:08:36 - Book with ID 9 returned. Available copies updated.
+2025-03-15 11:09:30 - Books exported to CSV file: src/main/resources/books.csv
+2025-03-15 11:10:08 - Books exported to CSV file: src/main/resources/books.csv
+2025-03-15 11:10:20 - Members exported to CSV file: src/main/resources/members.csv
+2025-03-15 11:14:10 - Book added: Ajscs
+2025-03-15 11:58:59 - Return book failed: Record not found or already returned
+2025-03-15 12:07:03 - Return book failed: Record not found or already returned

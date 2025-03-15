@@ -1,0 +1,59 @@
+.status-bar {
+    -fx-background-color: #f4f4f4;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1 0 0 0;
+}
+
+.button {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 5 15 5 15;
+}
+
+.button:hover {
+    -fx-background-color: #2980b9;
+}
+
+.table-view {
+    -fx-base: #ffffff;
+    -fx-control-inner-background: #ffffff;
+    -fx-table-cell-border-color: #e0e0e0;
+    -fx-table-header-border-color: #e0e0e0;
+}
+
+.table-view .column-header {
+    -fx-background-color: #f0f0f0;
+    -fx-font-weight: bold;
+}
+
+.pagination {
+    -fx-page-information-visible: false;
+}
+
+.pagination .pagination-control .button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #3498db;
+}
+
+.pagination .pagination-control .button:hover {
+    -fx-background-color: #e0e0e0;
+}
+
+.search-box {
+    -fx-background-color: white;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 3;
+}
+
+.form-container {
+    -fx-background-color: white;
+    -fx-padding: 20;
+    -fx-spacing: 10;
+}
+
+.form-title {
+    -fx-font-size: 18;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 10 0;
+}

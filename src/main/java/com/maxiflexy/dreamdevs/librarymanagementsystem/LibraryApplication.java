@@ -4,20 +4,40 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
 import java.io.IOException;
+import java.util.Objects;
+
+import javafx.scene.Parent;
+import javafx.scene.image.Image;
 
 public class LibraryApplication extends Application {
+
     @Override
-    public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(LibraryApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
-        stage.setScene(scene);
-        stage.show();
+    public void start(Stage primaryStage) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/main.fxml"));
+            Parent root = loader.load();
+
+            Scene scene = new Scene(root, 1000, 700);
+            scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/css/styles.css")).toExternalForm());
+
+            primaryStage.setTitle("Library Management System");
+            primaryStage.setScene(scene);
+
+            // Optional: Set application icon
+            try {
+                primaryStage.getIcons().add(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/library_icon.png"))));
+            } catch (Exception e) {
+                System.out.println("Icon not found or could not be loaded");
+            }
+
+            primaryStage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public static void main(String[] args) {
-        launch();
+        launch(args);
     }
 }

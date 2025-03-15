@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane fx:id="mainPane" prefHeight="700.0" prefWidth="1000.0"
+            xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.maxiflexy.dreamdevs.librarymanagementsystem.ui.controller.MainController">
+    <top>
+        <VBox>
+            <MenuBar>
+                <menus>
+                    <Menu text="File">
+                        <items>
+                            <MenuItem text="Exit" onAction="#exitApplication" />
+                        </items>
+                    </Menu>
+                    <Menu text="Help">
+                        <items>
+                            <MenuItem text="About" onAction="#showAbout" />
+                        </items>
+                    </Menu>
+                </menus>
+            </MenuBar>
+            <ToolBar>
+                <items>
+                    <Button text="Books" onAction="#loadBookListView" />
+                    <Button text="Members" onAction="#loadMemberListView" />
+                    <Button text="Borrowings" onAction="#loadBorrowingListView" />
+                </items>
+            </ToolBar>
+        </VBox>
+    </top>
+    <center>
+        <!-- Content will be loaded dynamically -->
+    </center>
+    <bottom>
+        <HBox styleClass="status-bar">
+            <padding>
+                <Insets top="5" right="10" bottom="5" left="10" />
+            </padding>
+            <Label text="Library Management System - JavaFX Version" />
+            <Pane HBox.hgrow="ALWAYS" />
+            <Label text="© 2025" />
+        </HBox>
+    </bottom>
+</BorderPane>

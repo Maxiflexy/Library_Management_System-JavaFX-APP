@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.maxiflexy.dreamdevs.librarymanagementsystem.ui.controller.borrowing.BorrowingListController">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10" />
+    </padding>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Button text="Borrow Book" onAction="#handleBorrowBook" />
+        <Button text="Return Book" onAction="#handleReturnBook" />
+        <Separator orientation="VERTICAL" />
+        <HBox spacing="5">
+            <RadioButton fx:id="allRecordsRadio" text="All Records" />
+            <RadioButton fx:id="activeRecordsRadio" text="Active Only" />
+        </HBox>
+    </HBox>
+
+    <TableView fx:id="borrowingTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID" prefWidth="50" />
+            <TableColumn fx:id="bookTitleColumn" text="Book" prefWidth="250" />
+            <TableColumn fx:id="memberNameColumn" text="Member" prefWidth="200" />
+            <TableColumn fx:id="borrowDateColumn" text="Borrow Date" prefWidth="120" />
+            <TableColumn fx:id="returnDateColumn" text="Return Date" prefWidth="120" />
+        </columns>
+        <placeholder>
+            <Label text="No borrowing records available" />
+        </placeholder>
+    </TableView>
+
+    <Pagination fx:id="pagination" />
+</VBox>

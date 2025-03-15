@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.maxiflexy.dreamdevs.librarymanagementsystem.ui.controller.borrowing.BorrowBookController"
+      prefWidth="800" prefHeight="600">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20" />
+    </padding>
+
+    <Label text="Borrow Book" styleClass="form-title" />
+
+    <VBox spacing="10">
+        <Label text="Select a Book" style="-fx-font-weight: bold" />
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Search:" />
+            <TextField fx:id="bookSearchField" promptText="Search books by title or author" HBox.hgrow="ALWAYS" />
+        </HBox>
+        <TableView fx:id="bookTable" prefHeight="200" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="bookIdColumn" text="ID" prefWidth="50" />
+                <TableColumn fx:id="titleColumn" text="Title" prefWidth="300" />
+                <TableColumn fx:id="authorColumn" text="Author" prefWidth="200" />
+                <TableColumn fx:id="availableColumn" text="Available Copies" prefWidth="100" />
+            </columns>
+        </TableView>
+    </VBox>
+
+    <Separator />
+
+    <VBox spacing="10">
+        <Label text="Select a Member" style="-fx-font-weight: bold" />
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Search:" />
+            <TextField fx:id="memberSearchField" promptText="Search members by name or email" HBox.hgrow="ALWAYS" />
+        </HBox>
+        <TableView fx:id="memberTable" prefHeight="200" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="memberIdColumn" text="ID" prefWidth="50" />
+                <TableColumn fx:id="nameColumn" text="Name" prefWidth="300" />
+                <TableColumn fx:id="emailColumn" text="Email" prefWidth="300" />
+            </columns>
+        </TableView>
+    </VBox>
+
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button text="Borrow" onAction="#handleBorrow" defaultButton="true" />
+        <Button text="Cancel" onAction="#handleCancel" cancelButton="true" />
+    </HBox>
+</VBox>
